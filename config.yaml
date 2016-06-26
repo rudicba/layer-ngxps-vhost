@@ -1,6 +1,6 @@
 options:
   listen:
-    description: nginx listen directive
+    description: Nginx listen directive
     type: string
     default: '80'
   RewriteLevel:
