@@ -1,0 +1,32 @@
+options:
+  listen:
+    description: nginx listen directive
+    type: string
+    default: '80'
+  RewriteLevel:
+    description: |
+      PageSpeed offers three "levels" to simplify configuration: PassThrough,
+      CoreFilters, and OptimizeForBandwidth. The CoreFilters set contains
+      filters that the PageSpeed team believes are safe for most web sites.
+      By using the CoreFilters set, as PageSpeed is updated with new filters,
+      your site will get faster. The OptimizeForBandwidth setting provides a
+      stronger guarantee of safety and is suitable as a default setting for use
+      with sites that are not aware of PageSpeed.
+    type: string
+    default: 'CoreFilters'
+  EnableFilters:
+    description: Enable specific filters with the EnableFilters directive
+    type: string
+    default: >
+      defer_javascript,inline_javascript,move_css_above_scripts,
+      lazyload_images,rewrite_images,collapse_whitespace,remove_comments,
+      extend_cache
+  LearningMode:
+    description: |
+      Start Naxsi in learning mode. This means that no request will actually
+      be blocked. Only security exceptions will be raised in the Nginx error
+      log. Such a non-blocking initial behavior is important because the default
+      rules are rather aggressive. Later, based on these exceptions, we will
+      create whitelist for legitimate traffic.
+    type: boolean
+    default: false
