@@ -3,6 +3,10 @@ options:
     description: Nginx listen directive
     type: string
     default: '80'
+  server_name:
+    description: Determine which server block is used for a given request.
+    type: string
+    default: ''
   RewriteLevel:
     description: |
       PageSpeed offers three "levels" to simplify configuration: PassThrough,
