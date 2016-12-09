@@ -3,11 +3,6 @@ summary: Layer for building Nginx Pagespeed server block
 maintainer: Rodolfo E. Edelmann <rudicba@gmail.com>
 description: |
   Layer for building servers block for Nginx Pagespeed charm
-tags:
-  - ops
-  - network
-  - web_server
-  - perfomance
 provides:
   website:
     interface: http

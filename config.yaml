@@ -7,6 +7,10 @@ options:
     description: Determine which server block is used for a given request.
     type: string
     default: ''
+  access_log:
+    description: Writes information about client requests in the access log
+    type: boolean
+    default: false
   RewriteLevel:
     description: |
       PageSpeed offers three "levels" to simplify configuration: PassThrough,
@@ -34,3 +38,4 @@ options:
       create whitelist for legitimate traffic.
     type: boolean
     default: false
+
